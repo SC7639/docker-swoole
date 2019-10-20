@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+  web:
+    build: ./
+    ports:
+      - 8080:80
+      - 9501:9501
+    volumes:
+      - ./:/var/www
+
+volumes:
+  mysql_data: { driver: local }
